@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import One from '../assets/videos/1.mp4';
 import Two from '../assets/videos/2.mp4';
 import Three from '../assets/videos/3.mp4';
