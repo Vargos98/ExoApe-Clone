@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Lausanne';
+  src: url('../assets/fonts/Lausanne.eot');
+  src: local('Lausanne'),
+      url('../assets/fonts/Lausanne.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/Lausanne.woff2') format('woff2'),
+      url('../assets/fonts/Lausanne.woff') format('woff'),
+      url('../assets/fonts/Lausanne.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

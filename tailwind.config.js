@@ -5,8 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        lausanne: ['Lausanne', 'sans-serif'], // Adding Lausanne font
+      },
+    },
   },
   plugins: [],
 }
-

@@ -1,9 +1,9 @@
-import React from 'react'
+// import React from 'react'
 import Navbar from './Components/Navbar'
 
 const App = () => {
   return (
-    <div>
+    <div className='bg-zinc-900 w-full h-screen'>
       <Navbar />
     </div>
   )
