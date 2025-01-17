@@ -1,10 +1,12 @@
 // import React from 'react'
+import Landing from './Components/Landing'
 import Navbar from './Components/Navbar'
 
 const App = () => {
   return (
-    <div className='bg-zinc-900 w-full h-screen'>
+    <div className='w-full '>
       <Navbar />
+      <Landing />
     </div>
   )
 }
