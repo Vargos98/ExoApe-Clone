@@ -1,5 +1,5 @@
-// import React from 'react'
 import { MdOutlineArrowDownward } from "react-icons/md";
+
 const Landing = () => {
   return (
     <div className="w-full h-[150vh] sm:h-[250vh] relative">
@@ -13,41 +13,55 @@ const Landing = () => {
       </div>
 
       {/* Text Content */}
-      <div className="w-full absolute top-0 ">
-      <div className=" max-w-screen-2xl mx-auto px-5 sm:px-10 text-white h-full flex flex-col justify-center">
-        <div className="para mt-[15rem] sm:mt-[40rem] font-regular sm:text-nowrap opacity-90 w-1/2">
-         
-          <p className="text-md  sm:text-4xl ">Global digital design studio partnering with</p>
-          <p className="text-md  sm:text-4xl">brands and businesses that create exceptional</p>
-          <p className="text-md  sm:text-4xl">experiences where people live, work, and unwind.</p>
-        </div>
-        <div className="headings mt-5 sm:mt-32 sm:-ml-5">
-          <h1 className="text-6xl sm:text-[20rem] tracking-tighter leading-none">
-            Digital
-          </h1>
-          <h1 className="text-6xl sm:text-[20rem] tracking-tighter leading-none">
-            Design
-          </h1>
-          <h1 className="text-6xl  sm:text-[20rem]  tracking-tighter leading-none">
-            Experience
-          </h1>
-          <div className="mt-6 text-xl sm:text-4xl sm:ml-5">
-          <MdOutlineArrowDownward />
+      <div className="w-full absolute top-0">
+        <div className="max-w-screen-2xl mx-auto px-5 sm:px-10 text-white h-full flex flex-col justify-center">
+          {/* Main Paragraph */}
+          <div className="para  mt-[15rem] sm:mt-[15rem] font-regular opacity-90 sm:w-1/2 animate-fade-in text-nowrap">
+            <p className="text-lg sm:text-2xl leading-snug sm:leading-tight">
+              Global digital design studio partnering with
+            </p>
+            <p className="text-lg sm:text-2xl leading-snug sm:leading-tight">
+              brands and businesses that create exceptional
+            </p>
+            <p className="text-lg sm:text-2xl leading-snug sm:leading-tight">
+              experiences where people live, work, and unwind.
+            </p>
+          </div>
+
+          {/* Headings */}
+          <div className="headings mt-5 sm:mt-24 sm:-ml-5">
+            <h1 className="text-5xl sm:text-[15vw] tracking-tighter leading-none animate-slide-in">
+              Digital
+            </h1>
+            <h1 className="text-5xl sm:text-[15vw] tracking-tighter leading-none animate-slide-in delay-200">
+              Design
+            </h1>
+            <h1 className="text-5xl sm:text-[15vw] tracking-tighter leading-none animate-slide-in delay-400">
+              Experience
+            </h1>
+            <div className="mt-6 text-2xl sm:text-4xl sm:ml-5 animate-bounce">
+              <MdOutlineArrowDownward />
+            </div>
+          </div>
+
+          {/* Secondary Paragraph */}
+          <div className="para2 mt-10 sm:w-1/3 animate-fade-in">
+            <div className="font-medium text-lg sm:text-3xl text-nowrap ">
+              <p>We help experience-driven companies</p>
+              <p>thrive by making their audience feel the</p>
+              <p>refined intricacies of their brand and product</p>
+              <p>in the digital space. Unforgettable journeys</p>
+              <p>start with a click.</p>
+            </div>
+            <a
+              href="#"
+              className="text-md sm:text-xl border-b border-zinc-100 pb-1 inline-block mt-10"
+            >
+              The Studio
+            </a>
           </div>
         </div>
-        <div className="para2 mt-10 sm:w-1/3">
-          <div className="font-medium  sm:text-3xl text-nowrap">
-            <p>We help experience-drivern companies</p>
-            <p>thrive by making their audience feel the</p>
-            <p>refined intricacies of their brand and product</p>
-            <p>in the digital space. Unforgettable journeys</p>
-            <p>start with a click.</p>    
-          </div>
-          <a href="#" className="sm:text-xl sm:border-b-[1px] border-b-[0.3px] mt-10 inline-block border-zinc-100 pb-1">The Studio</a>
-        </div>
       </div>
-      </div>
-      
     </div>
   );
 };
