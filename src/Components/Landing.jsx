@@ -16,14 +16,14 @@ const Landing = () => {
       <div className="w-full absolute top-0">
         <div className="max-w-screen-2xl mx-auto px-5 sm:px-10 text-white h-full flex flex-col justify-center">
           {/* Main Paragraph */}
-          <div className="para  mt-[15rem] sm:mt-[15rem] font-regular opacity-90 sm:w-1/2 animate-fade-in text-nowrap">
-            <p className="text-lg sm:text-2xl leading-snug sm:leading-tight">
+          <div className="para  mt-[15rem] sm:mt-[15rem] font-regular opacity-90 sm:w-1/3 animate-fade-in text-nowrap">
+            <p className="text-lg sm:text-2xl leading-snug ">
               Global digital design studio partnering with
             </p>
-            <p className="text-lg sm:text-2xl leading-snug sm:leading-tight">
+            <p className="text-lg sm:text-2xl leading-snug ">
               brands and businesses that create exceptional
             </p>
-            <p className="text-lg sm:text-2xl leading-snug sm:leading-tight">
+            <p className="text-lg sm:text-2xl leading-snug ">
               experiences where people live, work, and unwind.
             </p>
           </div>

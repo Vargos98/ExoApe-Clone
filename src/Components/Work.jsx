@@ -71,7 +71,7 @@ const Work = () => {
       <div className='video-content flex gap-20'>
 
         <div className='left-video  w-1/2 h-[50rem]  ml-28 -mt-10'>
-          <video src={One} className='w-full h-full object-cover ' muted autoPlay></video>
+          <video src={One} className='w-full h-full object-cover ' loop muted autoPlay></video>
           <div className='flex items-center '>
             <h1 className='text-xl opacity-90 '>Amaterasu -</h1>
             <p className='text-md opacity-80 mt-1'>Frontier Innovation</p>
@@ -93,11 +93,11 @@ const Work = () => {
         </div>
 
       </div>
-      <div className='absolute bottom-[40rem] right-0 '>
-        <div className='w-[32rem] bg-zinc-800 h-[70vh]'>
-          <video src={Two} autoPlay muted className='w-full h-full object-cover'></video>
+      <div className='absolute sm:bottom-[30rem] xl:top-[60rem] xl:-bottom-[20rem] right-0 '>
+        <div className='w-[26rem] mr-20  bg-zinc-800 sm:h-[70vh] xl:h-[40rem]'>
+          <video src={Two} autoPlay muted loop className='w-full h-full object-cover'></video>
           <div className='flex items-center '>
-            <h1 className='text-xl opacity-90 '>AColumbia Pictures -</h1>
+            <h1 className='text-xl opacity-90 '>Columbia Pictures -</h1>
             <p className='text-md opacity-80 mt-1'>Celebrating a Century of Cinema</p>
           </div>
 
