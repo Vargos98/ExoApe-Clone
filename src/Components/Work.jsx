@@ -5,6 +5,7 @@ import Three from '../assets/videos/3.mp4';
 import Four from '../assets/videos/4.mp4';
 
 const Work = () => {
+  // Mobile view
   // State to store video data
   // const [videos] = useState([
   //   {
@@ -74,7 +75,7 @@ const Work = () => {
           <video src={One} className='w-full h-full object-cover ' loop muted autoPlay></video>
           <div className='flex items-center '>
             <h1 className='text-xl opacity-90 '>Amaterasu -</h1>
-            <p className='text-md opacity-80 mt-1'>Frontier Innovation</p>
+            <p className='text-md opacity-80 mt-1 text-gray-600'>Frontier Innovation</p>
           </div>
         </div>
         <div className='right-content h-64 w-1/3  -mt-10 ml-20'>
@@ -98,11 +99,28 @@ const Work = () => {
           <video src={Two} autoPlay muted loop className='w-full h-full object-cover'></video>
           <div className='flex items-center '>
             <h1 className='text-xl opacity-90 '>Columbia Pictures -</h1>
-            <p className='text-md opacity-80 mt-1'>Celebrating a Century of Cinema</p>
+            <p className='text-md opacity-80 text-gray-600 mt-1'>Celebrating a Century of Cinema</p>
           </div>
 
         </div>
       </div>
+      <div className='w-[30rem] mr-20  bg-zinc-800 sm:h-[70vh] xl:h-[40rem] absolute -bottom-[70rem] left-[35rem]'>
+        <video src={Three} autoPlay muted loop className='w-full h-full object-cover'></video>
+        <div className='flex items-center '>
+          <h1 className='text-xl opacity-90 '>Cambium -</h1>
+          <p className='text-md opacity-80 text-gray-600 mt-1'>Pioneering Sustainable Solutions</p>
+        </div>
+
+      </div>
+      <div className='w-[20rem]  mr-20  bg-zinc-800 sm:h-[70vh] xl:h-[25rem] absolute -bottom-[90rem] left-[10rem]'>
+        <video src={Four} autoPlay muted loop className='w-full h-full object-cover'></video>
+        <div className='flex items-center'>
+          <h1 className='text-xl opacity-90 '>Studio D -</h1>
+          <p className='text-md opacity-80 text-gray-600 mt-1'>Urban and Landscape Design</p>
+        </div>
+
+      </div>
+
     </div>
   );
 
