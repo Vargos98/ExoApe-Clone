@@ -1,6 +1,6 @@
 # ExoApe-Clone
 
-This project is a clone of the ExoApe landing page, developed for practice and educational purposes. It aims to replicate the design and functionality of the original [ExoApe website](https://www.exoape.com/).
+This project is a clone of the ExoApe's website, developed for practice and educational purposes. It aims to replicate the design and functionality of the original [ExoApe website](((https://www.exoape.com))).
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@ This project is a clone of the ExoApe landing page, developed for practice and e
 
 ## Demo
 
-A live demo of the project is available [here](https://exoape-clone-parth.netlify.app/).
+A live demo of the project is available [here](https://exo-ape-clone-blush.vercel.app/).
 
 ## Features
 
@@ -32,6 +32,8 @@ A live demo of the project is available [here](https://exoape-clone-parth.netlif
 - **Vite**: Next-generation frontend tooling for fast builds.
 - **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
 - **GSAP (GreenSock Animation Platform)**: JavaScript library for creating high-performance animations.
+- Framer-motion.
+- Locomotive-scroll.
 
 ## Getting Started
 
@@ -71,7 +73,7 @@ To start the development server, run:
 npm run dev
 ```
 
-Open your browser and navigate to `http://localhost:3000` to view the application.
+Open your browser and navigate to `http://localhost:5173` to view the application.
 
 ## Project Structure
 
@@ -111,7 +113,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Acknowledgements
 
 - Original design inspired by [ExoApe](https://www.exoape.com/).
-- This project was developed for practice purposes, similar to [davidhckh/exoape-landing-clone](https://github.com/davidhckh/exoape-landing-clone).
 
 ---
 
