@@ -26,7 +26,7 @@ const Images = () => {
       .to(third.current, {
         x: '-40%',
         ease: Linear,
-      }, 'a')
+      }, 'b')
       .to(second.current, {
         x: '30%',
         ease: Linear,
@@ -34,7 +34,7 @@ const Images = () => {
       .to(fourth.current, {
         x: '-30%',
         ease: Linear,
-      }, 'a');
+      }, 'b');
   });
 
   return (
