@@ -6,8 +6,12 @@ import Navbar from './Components/Navbar'
 import PlayReel from './Components/PlayReel'
 import Spread from './Components/Spread'
 import Work from './Components/Work'
-
+import LocomotiveScroll from 'locomotive-scroll';
 const App = () => {
+  
+
+const locomotiveScroll = new LocomotiveScroll();
+
   return (
     <div className='w-full '>
       <Navbar />
