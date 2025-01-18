@@ -1,6 +1,7 @@
 // import React from 'react'
 import Landing from './Components/Landing'
 import Navbar from './Components/Navbar'
+import PlayReel from './Components/PlayReel'
 import Work from './Components/Work'
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
       <Navbar />
       <Landing />
       <Work />
+      <PlayReel />
     </div>
   )
 }

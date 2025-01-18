@@ -43,7 +43,7 @@ const Work = () => {
   ];
 
   return (
-    <div className="w-full relative">
+    <div className="w-full relative h-[150vh]">
       {isMobile ? (
         // Mobile View Section
         <div className="max-w-screen-2xl mx-auto px-5 py-20 sm:px-10">
