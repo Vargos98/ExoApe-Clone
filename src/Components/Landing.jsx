@@ -29,14 +29,14 @@ const Landing = () => {
           </div>
 
           {/* Headings */}
-          <div className="headings mt-5 sm:mt-24 sm:-ml-5">
-            <h1 className="text-5xl sm:text-[15vw] tracking-tighter leading-none animate-slide-in">
+          <div className="headings mt-5 sm:mt-10 sm:-ml-5">
+            <h1 className="text-5xl sm:text-[14rem] tracking-tighter leading-none animate-slide-in">
               Digital
             </h1>
-            <h1 className="text-5xl sm:text-[15vw] tracking-tighter leading-none animate-slide-in delay-200">
+            <h1 className="text-5xl sm:text-[14rem] tracking-tighter leading-none animate-slide-in delay-200">
               Design
             </h1>
-            <h1 className="text-5xl sm:text-[15vw] tracking-tighter leading-none animate-slide-in delay-400">
+            <h1 className="text-5xl sm:text-[14rem] tracking-tighter leading-none animate-slide-in delay-400">
               Experience
             </h1>
             <div className="mt-6 text-2xl sm:text-4xl sm:ml-5 animate-bounce">
