@@ -1,12 +1,38 @@
 // import React from 'react'
+import { useEffect, useRef } from 'react';
+import {motion} from 'framer-motion';
 import Playvid from '../assets/videos/PlayReel.mp4'
+import gsap , {Power4 ,ScrollTrigger} from 'gsap/all';
 
 const PlayReel = () => {
+  const parent = useRef(null)
+  const videodiv = useRef(null)
+  
+  useEffect(()=>{
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(videodiv.current,{
+      scrollTrigger: {
+        trigger:parent.current,
+        top:"0 0",
+        scrub:1,
+        pin:true,
+      
+      },
+      width:"105%",
+      height:"105%",
+      ease:Power4,
+      
+     
+    })
+  })
   return (
-    <div className="w-full overflow-hidden h-screen mt-[150vh] sm:mt-[380vh] relative bg-black">
+    <div ref={parent} className="w-full overflow-hidden h-screen mt-[150vh] sm:mt-[380vh] relative bg-black">
       {/* Video Box */}
-      <div className="w-40 sm:w-96 overflow-hidden z-[10] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div 
+      ref={videodiv}
+      className="w-40 sm:w-96 overflow-hidden z-[10] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <video
+        
           className="w-full h-full object-cover scale-[2.5]"
           src={Playvid}
           muted
