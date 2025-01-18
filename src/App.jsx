@@ -1,4 +1,5 @@
 // import React from 'react'
+import Footer from './Components/Footer'
 import Images from './Components/Images'
 import Landing from './Components/Landing'
 import Navbar from './Components/Navbar'
@@ -15,6 +16,7 @@ const App = () => {
       <PlayReel />
       <Images />
       <Spread />
+      <Footer />
     </div>
   )
 }
