@@ -1,8 +1,9 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import One from '../assets/videos/1.mp4';
 import Two from '../assets/videos/2.mp4';
 import Three from '../assets/videos/3.mp4';
 import Four from '../assets/videos/4.mp4';
+import { motion } from 'framer-motion';
 
 const Work = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -43,6 +44,7 @@ const Work = () => {
   ];
 
   return (
+
     <div className="w-full relative h-[150vh]">
       {isMobile ? (
         // Mobile View Section
@@ -62,7 +64,16 @@ const Work = () => {
             </svg>
             <h3 className="text-gray-800 font-medium">Featured Projects</h3>
           </div>
-          <h1 className="text-6xl my-5">Work</h1>
+          <h1 className="text-6xl my-5 overflow-hidden">
+            <motion.span
+              initial={{ rotate: "90deg", y: "40%", opacity: 0 }}
+              whileInView={{ rotate: 0, y: 0, opacity: 1 }}
+              transition={{ ease: [0.22, 1, 0.36, 1], duration: 0.8 }}
+              viewport={{ once: true }}
+              className='inline-block origin-left '>
+              Work
+            </motion.span>
+          </h1>
           <p className="text-md">
             Highlights of cases that we passionately built with forward-thinking clients and friends
             over the years.
@@ -81,13 +92,26 @@ const Work = () => {
         </div>
       ) : (
         // Desktop View Section
-        <div className="max-w-screen-2xl mx-auto h-[250vh] py-20 relative">
+        <div className="max-w-screen-2xl mx-auto h-[250vh]  py-20 relative">
           <div>
-            <h1 className="text-[20rem] font-semibold ml-28 tracking-tight">Work</h1>
+            <h1 className="text-[20rem] font-semibold ml-28 tracking-tight">
+              <motion.span
+                initial={{ rotate: "90deg", y: "40%", opacity: 0 }}
+                whileInView={{ rotate: 0, y: 0, opacity: 1 }}
+                transition={{ ease: [0.22, 1, 0.36, 1], duration: 0.8 }}
+                viewport={{ once: true }}
+                className='inline-block origin-left '>
+                Work
+              </motion.span>
+            </h1>
           </div>
           <div className="video-content flex gap-20">
             <div className="left-video w-1/2 h-[50rem] ml-28 -mt-10">
-              <video src={One} className="w-full h-full object-cover" loop muted autoPlay></video>
+              <motion.video 
+              
+              data-scroll 
+              data-scroll-speed="-.2"
+              src={One} className="w-full h-full object-cover" loop muted autoPlay></motion.video>
               <div className="flex items-center">
                 <h1 className="text-xl opacity-90">Amaterasu -</h1>
                 <p className="text-md opacity-80 mt-1 text-gray-600">Frontier Innovation</p>
@@ -118,7 +142,11 @@ const Work = () => {
           {/* Additional Videos */}
           <div className="absolute sm:bottom-[30rem] xl:top-[60rem] xl:-bottom-[20rem] right-0">
             <div className="w-[26rem] mr-20 bg-zinc-800 sm:h-[70vh] xl:h-[40rem]">
-              <video src={Two} autoPlay muted loop className="w-full h-full object-cover"></video>
+            <video 
+              
+              data-scroll 
+              data-scroll-speed="-.2"
+              src={Two} className="w-full h-full object-cover" loop muted autoPlay></video>
               <div className="flex items-center">
                 <h1 className="text-xl opacity-90">Columbia Pictures -</h1>
                 <p className="text-md opacity-80 text-gray-600 mt-1">
@@ -127,21 +155,29 @@ const Work = () => {
               </div>
             </div>
           </div>
-          <div className="w-[30rem] mr-20 bg-zinc-800 sm:h-[70vh] xl:h-[40rem] absolute -bottom-[70rem] left-[35rem]">
-            <video src={Three} autoPlay muted loop className="w-full h-full object-cover"></video>
+          <div className="w-[30rem] mr-20 bg-zinc-800 sm:h-[70vh] xl:h-[40rem] absolute bottom-[220px] left-[35rem]">
+          <video 
+              
+              
+              src={Three} className="w-full h-full object-cover" loop muted autoPlay></video>
             <div className="flex items-center">
               <h1 className="text-xl opacity-90">Cambium -</h1>
               <p className="text-md opacity-80 text-gray-600 mt-1">Pioneering Sustainable Solutions</p>
             </div>
           </div>
-          <div className="w-[20rem] mr-20 bg-zinc-800 sm:h-[70vh] xl:h-[25rem] absolute -bottom-[90rem] left-[10rem]">
-            <video src={Four} autoPlay muted loop className="w-full h-full object-cover"></video>
+          <div className="w-[20rem] mr-20 bg-zinc-800 sm:h-[70vh] xl:h-[25rem] absolute -bottom-[130px] left-[10rem]">
+          <video 
+              
+              
+              src={Four} className="w-full h-full object-cover" loop muted autoPlay></video>
             <div className="flex items-center">
               <h1 className="text-xl opacity-90">Studio D -</h1>
               <p className="text-md opacity-80 text-gray-600 mt-1">Urban and Landscape Design</p>
             </div>
           </div>
+          
         </div>
+        
       )}
     </div>
   );

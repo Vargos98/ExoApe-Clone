@@ -3,7 +3,7 @@ import Global from '../assets/videos/Global.mp4';
 
 const Footer = () => {
   return (
-    <div className="bg-black text-white min-h-screen flex flex-col">
+    <div className="bg-[#070707] text-white min-h-screen flex flex-col">
       {/* Header Section */}
       <header className="relative flex flex-col sm:flex-row items-start sm:items-center justify-between px-10 sm:px-20 py-10 sm:py-20 flex-1">
         <div className="sm:w-1/2 flex flex-col space-y-6">
@@ -28,7 +28,7 @@ const Footer = () => {
       </header>
 
       {/* Footer Section */}
-      <footer className="bg-black text-white py-10 px-5 sm:px-20 border-t border-gray-700 opacity-80">
+      <footer className="bg-[#070707] text-white py-10 px-5 sm:px-20 border-t border-gray-700 opacity-80">
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-5">
           <div className='hidden sm:block'>
             <address className="not-italic">
