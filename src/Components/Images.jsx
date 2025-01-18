@@ -1,26 +1,105 @@
-// import React from 'react'
+import { useEffect, useRef } from 'react';
 import B from '../assets/videos/B.mp4';
 import D from '../assets/videos/D.mp4';
+import gsap, { Linear, ScrollTrigger } from 'gsap/all';
+
 const Images = () => {
+  const first = useRef(null);
+  const second = useRef(null);
+  const third = useRef(null);
+  const fourth = useRef(null);
+  const parent = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: parent.current,
+        start: '0 90%',
+        scrub: 1,
+      },
+    });
+    tl.to(first.current, {
+      x: '40%',
+      ease: Linear,
+    }, 'a')
+      .to(third.current, {
+        x: '-40%',
+        ease: Linear,
+      }, 'a')
+      .to(second.current, {
+        x: '30%',
+        ease: Linear,
+      }, 'a')
+      .to(fourth.current, {
+        x: '-30%',
+        ease: Linear,
+      }, 'a');
+  });
+
   return (
-    <div className='w-full h-[70vh] sm:h-[150vh] bg-white flex items-center justify-center overflow-hidden'>
-      <div className='w-[40%] h-1/2 relative '>
-        <div className=' absolute w-20 h-[7rem] sm:w-40 sm:h-[14rem] z-10 sm:-right-10 -right-1/3  top-6 '>
-          <img src="https://a.storyblok.com/f/133769/348x494/21becfd449/home-news-3.jpg/m/1200x1703/filters:quality(90)" alt="" className="w-full h-full object-cover"/>
+    <div
+      ref={parent}
+      className="w-full py-20 h-[80vh] sm:h-[150vh] bg-white flex items-center justify-center overflow-hidden"
+    >
+      <div className="w-[90%] h-full relative flex flex-col sm:flex-row items-center justify-center">
+        {/* Image 1 */}
+        <div
+          ref={first}
+          className="absolute w-[30%] sm:w-[25%] h-[20rem] sm:h-[30rem] z-10 top-[10%] sm:top-6 left-[50%] sm:-right-[50%]"
+        >
+          <img
+            src="https://a.storyblok.com/f/133769/348x494/21becfd449/home-news-3.jpg/m/1200x1703/filters:quality(90)"
+            alt=""
+            className="w-full h-full object-cover"
+          />
         </div>
-        <div className=' absolute w-[8rem] sm:w-[17rem] sm:-left-20 z-10 aspect-video -left-1/2 top-1/3'>
-          <video src={B} className='w-full h-full object-cover' muted loop autoPlay></video>
+        {/* Video 1 */}
+        <div
+          ref={second}
+          className="absolute w-[40%] sm:w-[30%] h-[15rem] sm:h-[20rem] z-10 top-[35%] left-[20%] sm:-left-[5%]"
+        >
+          <video
+            src={B}
+            className="w-full h-full object-cover"
+            muted
+            loop
+            autoPlay
+          ></video>
         </div>
-        <div className=' absolute w-[9rem] aspect-video sm:w-[18rem] sm:-bottom-40 -bottom-10 -left-[75%] sm:-left-[40%]'>
-        <img src="https://a.storyblok.com/f/133769/758x508/8a1ff60d00/home-news-4.jpg/m/1200x804/filters:quality(90)" alt="" className="w-full h-full object-cover"/>
+        {/* Image 2 */}
+        <div
+          ref={third}
+          className="absolute w-[40%] sm:w-[30%] h-[15rem] sm:h-[20rem] z-10 bottom-[10%] left-[15%] sm:left-[25%]"
+        >
+          <img
+            src="https://a.storyblok.com/f/133769/758x508/8a1ff60d00/home-news-4.jpg/m/1200x804/filters:quality(90)"
+            alt=""
+            className="w-full h-full object-cover"
+          />
         </div>
-        <div className=' z-20 absolute w-[10rem] sm:w-[20rem] sm:h-[30rem] aspect-[1.5/1] sm:-right-64 -right-[70%] -bottom-[37%] sm:-bottom-[90%]  '>
-        <video src={D} className='w-full h-full object-cover' muted loop autoPlay></video>
+        {/* Video 2 */}
+        <div
+          ref={fourth}
+          className="absolute w-[40%] sm:w-[35%] h-[20rem] sm:h-[30rem] z-20 bottom-[5%] right-[10%] sm:-right-[20%]"
+        >
+          <video
+            src={D}
+            className="w-full h-full object-cover"
+            muted
+            loop
+            autoPlay
+          ></video>
         </div>
-        <img src="https://a.storyblok.com/f/133769/748x1278/5784aa7150/home-news-1.jpg/m/1200x2050/filters:quality(90)" className='w-full h-full object-cover sm:w-[15rem] sm:h-[80vh] absolute sm:left-1/2 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2' alt="" />
+        {/* Center Image */}
+        <img
+          src="https://a.storyblok.com/f/133769/748x1278/5784aa7150/home-news-1.jpg/m/1200x2050/filters:quality(90)"
+          className="w-[60%] sm:w-[30%] h-[70%] sm:h-[90%] object-cover absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          alt=""
+        />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Images
+export default Images;
